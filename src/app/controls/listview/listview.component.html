@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of items">
+    <span *ngIf="!itemTemplate">Sem template</span>
+    <ng-container *ngTemplateOutlet="itemTemplate; context: {$implicit: item}">
+    </ng-container>
+  </li>
+</ul>

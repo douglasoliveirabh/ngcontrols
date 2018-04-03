@@ -1,5 +1,13 @@
-<app-cardorlistview [mode]=mode [items]="items">
-  <ng-template appCarditem let-person>
+<ngc-listview [items]="items">
+  <ng-template ngcTemplate="listItem" let-item>
+    <div>
+      {{item.id}} - {{item.nome}}
+    </div>
+  </ng-template>
+</ngc-listview>
+
+<!--<app-cardorlistview appCarditem [items]="items">
+  <ng-template ngcTemplate="card" let-person>
     <div>
       <span>Card Template</span>
       <h1>{{person.id}}</h1>
@@ -14,4 +22,4 @@
       <p>{{item.content}}</p>
     </div>
   </ng-template>
-</app-cardorlistview>
+</app-cardorlistview>-->
